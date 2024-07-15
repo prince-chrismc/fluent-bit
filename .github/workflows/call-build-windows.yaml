@@ -154,10 +154,6 @@ jobs:
         run: |
           C:\vcpkg\vcpkg install --recurse libyaml --triplet ${{ matrix.config.vcpkg_triplet }}
         shell: cmd
-      - name: Build librkafka with vcpkg
-        run: |
-          C:\vcpkg\vcpkg install --recurse librdkafka --triplet ${{ matrix.config.vcpkg_triplet }}
-        shell: cmd
 
       - name: Save packages of vcpkg
         id: save-vcpkg-sources
